@@ -15,12 +15,12 @@ rm -rf feeds/packages/lang/golang
 git clone https://github.com/sbwml/packages_lang_golang -b 24.x feeds/packages/lang/golang
 
 # 必要的库
-git clone --depth=1 -b main https://github.com/linkease/istore-packages package/istore-packages
-git clone --depth=1 -b dev https://github.com/jjm2473/luci-app-diskman package/diskman
-git clone --depth=1 -b dev6 https://github.com/jjm2473/OpenAppFilter package/oaf
-git clone --depth=1 -b master https://github.com/linkease/nas-packages package/nas-packages
-git clone --depth=1 -b main https://github.com/linkease/nas-packages-luci package/nas-packages-luci
-git clone --depth=1 -b main https://github.com/jjm2473/openwrt-apps package/openwrt-apps
+# git clone --depth=1 -b main https://github.com/linkease/istore-packages package/istore-packages
+# git clone --depth=1 -b dev https://github.com/jjm2473/luci-app-diskman package/diskman
+# git clone --depth=1 -b dev6 https://github.com/jjm2473/OpenAppFilter package/oaf
+# git clone --depth=1 -b master https://github.com/linkease/nas-packages package/nas-packages
+# git clone --depth=1 -b main https://github.com/linkease/nas-packages-luci package/nas-packages-luci
+# git clone --depth=1 -b main https://github.com/jjm2473/openwrt-apps package/openwrt-apps
 
 # 移除要替换的包
 rm -rf feeds/packages/net/{xray-core,v2ray-core,v2ray-geodata,sing-box}
