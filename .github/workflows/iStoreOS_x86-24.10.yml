@@ -98,12 +98,12 @@ jobs:
     - name: 安装软件源
       run: |
         cd $OPENWRT_PATH
-        sed -i "1isrc-git istore-packages https://github.com/linkease/istore-packages.git;main\n" feeds.conf.default
+        sed -i "1isrc-git istore_packages https://github.com/linkease/istore-packages.git;main\n" feeds.conf.default
         sed -i "2isrc-git diskman https://github.com/jjm2473/luci-app-diskman.git;dev\n" feeds.conf.default
         sed -i "3isrc-git oaf https://github.com/jjm2473/OpenAppFilter.git;dev6\n" feeds.conf.default        
-        sed -i "4isrc-git nas-packages https://github.com/linkease/nas-packages.git;master\n" feeds.conf.default        
-        sed -i "5isrc-git nas-packages-luci https://github.com/linkease/nas-packages-luci.git;main\n" feeds.conf.default        
-        sed -i "6isrc-git openwrt-apps https://github.com/jjm2473/openwrt-apps.git;main\n" feeds.conf.default        
+        sed -i "4isrc-git nas_packages https://github.com/linkease/nas-packages.git;master\n" feeds.conf.default        
+        sed -i "5isrc-git nas_packages_luci https://github.com/linkease/nas-packages-luci.git;main\n" feeds.conf.default        
+        sed -i "6isrc-git openwrt_apps https://github.com/jjm2473/openwrt-apps.git;main\n" feeds.conf.default        
         ./scripts/feeds update -a
         ./scripts/feeds install -a
 
