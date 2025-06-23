@@ -72,13 +72,6 @@ sed -i 's/192.168.1.1/192.168.100.1/g' package/base-files/files/bin/config_gener
 sed -i "s/DISTRIB_DESCRIPTION='*.*'/DISTRIB_DESCRIPTION='iStoreOS-$(date +%Y%m%d)'/g"  package/base-files/files/etc/openwrt_release
 sed -i "s/DISTRIB_REVISION='*.*'/DISTRIB_REVISION=' By Stone'/g" package/base-files/files/etc/openwrt_release
 
-# TTYD
-# sed -i 's/services/system/g' feeds/luci/applications/luci-app-ttyd/root/usr/share/luci/menu.d/luci-app-ttyd.json
-sed -i 's/services/vpn/g' feeds/luci/applications/luci-app-passwall/root/usr/share/luci/menu.d/luci-app-passwall.lua
-sed -i 's/services/vpn/g' feeds/luci/applications/luci-app-homeproxy/root/usr/share/luci/menu.d/luci-app-homeproxy.json
-sed -i 's/services/vpn/g' feeds/luci/applications/luci-app-openclash/root/usr/share/luci/menu.d/luci-app-openclash.lua
-sed -i 's/services/vpn/g' feeds/luci/applications/luci-app-nikki/root/usr/share/luci/menu.d/luci-app-nikki.json
-
 # 更换默认背景
 cp -f $GITHUB_WORKSPACE/images/bg1.jpg feeds/third/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg
 
@@ -88,3 +81,10 @@ git clone --depth=1 -b main https://github.com/stone6689/default-settings packag
 # 更新Feeds
 ./scripts/feeds update -a
 ./scripts/feeds install -a
+
+# TTYD
+# sed -i 's/services/system/g' feeds/luci/applications/luci-app-ttyd/root/usr/share/luci/menu.d/luci-app-ttyd.json
+sed -i 's/services/vpn/g' feeds/luci/applications/luci-app-passwall/root/usr/share/luci/menu.d/luci-app-passwall.lua
+sed -i 's/services/vpn/g' feeds/luci/applications/luci-app-homeproxy/root/usr/share/luci/menu.d/luci-app-homeproxy.json
+sed -i 's/services/vpn/g' feeds/luci/applications/luci-app-openclash/root/usr/share/luci/menu.d/luci-app-openclash.lua
+sed -i 's/services/vpn/g' feeds/luci/applications/luci-app-nikki/root/usr/share/luci/menu.d/luci-app-nikki.json
