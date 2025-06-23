@@ -74,6 +74,10 @@ sed -i "s/DISTRIB_REVISION='*.*'/DISTRIB_REVISION=' By Stone'/g" package/base-fi
 
 # TTYD
 # sed -i 's/services/system/g' feeds/luci/applications/luci-app-ttyd/root/usr/share/luci/menu.d/luci-app-ttyd.json
+sed -i 's/services/vpn/g' feeds/luci/applications/luci-app-passwall/root/usr/share/luci/menu.d/luci-app-passwall.lua
+sed -i 's/services/vpn/g' feeds/luci/applications/luci-app-homeproxy/root/usr/share/luci/menu.d/luci-app-homeproxy.json
+sed -i 's/services/vpn/g' feeds/luci/applications/luci-app-openclash/root/usr/share/luci/menu.d/luci-app-openclash.lua
+sed -i 's/services/vpn/g' feeds/luci/applications/luci-app-nikki/root/usr/share/luci/menu.d/luci-app-nikki.json
 
 # 更换默认背景
 cp -f $GITHUB_WORKSPACE/images/bg1.jpg feeds/third/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg
