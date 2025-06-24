@@ -112,8 +112,3 @@ git clone --depth=1 -b main https://github.com/stone6689/default-settings packag
 # 更新Feeds
 ./scripts/feeds update -a
 ./scripts/feeds install -a
-
-sed -i 's/services/vpn/g' feeds/luci/applications/luci-app-passwall/root/usr/share/luci/menu.d/luci-app-passwall.lua
-sed -i 's/services/vpn/g' feeds/luci/applications/luci-app-homeproxy/root/usr/share/luci/menu.d/luci-app-homeproxy.json
-sed -i 's/services/vpn/g' feeds/luci/applications/luci-app-openclash/root/usr/share/luci/menu.d/luci-app-openclash.lua
-sed -i 's/services/vpn/g' feeds/luci/applications/luci-app-nikki/root/usr/share/luci/menu.d/luci-app-nikki.json
