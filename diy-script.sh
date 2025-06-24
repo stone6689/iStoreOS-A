@@ -78,10 +78,6 @@ cp -f $GITHUB_WORKSPACE/images/bg1.jpg feeds/third/luci-theme-argon/htdocs/luci-
 # iStoreOS-settings
 git clone --depth=1 -b main https://github.com/stone6689/default-settings package/default-settings
 
-# 更新Feeds
-./scripts/feeds update -a
-./scripts/feeds install -a
-
 # TTYD
 # sed -i 's/services/system/g' feeds/luci/applications/luci-app-ttyd/root/usr/share/luci/menu.d/luci-app-ttyd.json
 # sed -i 's/services/vpn/g' feeds/luci/applications/luci-app-passwall/root/usr/share/luci/menu.d/luci-app-passwall.lua
@@ -115,3 +111,7 @@ sed -i 's/services/vpn/g' feeds/luci/applications/luci-app-nikki/htdocs/luci-sta
 # 调整HomeProxy到VPN菜单
 sed -i 's/services/vpn/g' feeds/luci/applications/luci-app-homeproxy/htdocs/luci-static/resources/*.js
 sed -i 's/services/vpn/g' feeds/luci/applications/luci-app-homeproxy/htdocs/luci-static/resources/view/homeproxy/*.js
+
+# 更新Feeds
+./scripts/feeds update -a
+./scripts/feeds install -a
