@@ -2,8 +2,8 @@ name: iStoreOS_X86_64-24.10
 
 on:
   workflow_dispatch:
-  #schedule:
-   #- cron: 0 17 * * *
+  schedule:
+   - cron: 0 17 * * 1
 
 env:
   REPO_URL: https://github.com/istoreos/istoreos
